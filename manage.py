@@ -1,22 +1,22 @@
 #!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
+"""Django 的命令行工具，用于执行管理任务。"""
 import os
 import sys
 
 
 def main():
-    """Run administrative tasks."""
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "untitled.settings")
+    """执行管理任务。"""
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Dj-i8.settings")  # 设置默认的 Django 配置模块
     try:
-        from django.core.management import execute_from_command_line
+        from django.core.management import execute_from_command_line  # 从 Django 导入命令行管理工具
     except ImportError as exc:
         raise ImportError(
-            "Couldn't import Django. Are you sure it's installed and "
-            "available on your PYTHONPATH environment variable? Did you "
-            "forget to activate a virtual environment?"
-        ) from exc
-    execute_from_command_line(sys.argv)
+            "无法导入 Django。你确定它已安装并且 "
+            "在你的 PYTHONPATH 环境变量中吗？你是否 "
+            "忘记激活虚拟环境？"
+        ) from exc  # 如果导入失败，抛出异常并给出提示
+    execute_from_command_line(sys.argv)  # 执行命令行任务
 
 
 if __name__ == "__main__":
-    main()
+    main()  # 运行管理任务
